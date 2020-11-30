@@ -1,0 +1,141 @@
+/*Central reference for colors*/
+:root {
+    --main-color:rgb(35, 213, 226);
+    --sec-color:rgb(159, 254, 235);
+    --ter-color:rgb(100, 26, 245);
+    --ter-color-light:rgb(180,159,242);
+    --background:rgb(226, 232, 240);
+    --lightest: rgb(255, 255, 255);
+    --text:rgb(16, 16, 16);
+}
+/*basic reset for boxes*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* manage font size*/
+html {
+    box-sizing: border-box; 
+    font-size: 62.5%;
+  }
+@media (max-width: 1200px) {
+    html {
+      font-size: 60%;
+    }
+  }
+@media (max-width: 980px) {
+    html {
+      font-size: 57%; 
+    }
+  }
+@media (max-width: 460px) {
+    html {
+      font-size: 52%;  
+    }
+  }
+
+/* Basic style rules */
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8rem; /* (1.8*10)18px >=1200px,(1.8*8.8)15.8 para mobile*/
+    line-height: 1.3;
+    color: var(--text);
+    background: var(--background)
+  }
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: var(--main-color);
+}
+header #profile-pic {
+    max-height: 35px;
+    border-radius: 999px;
+}
+header #logo {
+    max-height: 50px;
+}
+@media (max-width: 460px) {
+    header #profile-pic {
+        max-height: 25px;
+    }
+    header #logo {
+        max-height: 35px;
+    }
+  }
+/* Nav bar */
+nav {
+    margin: 0rem 1.5rem;
+    padding: 1.5rem 0rem;
+}
+ul {
+    list-style: none;
+}
+ul .nav-link {
+    display: inline-flex;
+}
+a {
+    text-decoration: none;
+    color: var(--text);
+  }
+/* Section group members */
+section#group-members{
+    margin: 0rem 1rem;
+    padding: 1.5rem 0rem;
+    display: flex;
+}
+
+button {
+    border-radius: 0.4rem;
+    padding: 0 1.2rem;
+    height: 3.2rem;
+    margin: 0.5rem;
+    background-color: var(--main-color);
+    color: white;
+    border: 0px solid var(--main-color);
+}
+button#disabled {
+    background-color: var(--ter-color-light);
+}
+select{
+    height: 3.2rem;
+    min-width: 100%;
+}
+/* Section students */
+section#students{
+    margin: 0rem 1.5rem;
+    padding: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1rem;
+    background-color:var(--lightest);
+}
+#buttons {
+    padding-rigth: 1rem ;
+}
+form {
+    padding: 0 2rem ;
+}
+article{
+    border: 1px solid var(--main-color);
+    border-radius: 0.4rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+article img{
+    border-radius: 999px;
+    max-height: 55px;
+}
+article input{
+    height: 100%;
+    margin-right : 2rem;
+}
