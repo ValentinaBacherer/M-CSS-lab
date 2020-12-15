@@ -87,9 +87,14 @@ a {
     color: var(--text);
   }
 
+/* container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
 /* Section group members */
 section#group-members{
-    margin: 0rem 1rem;
+    margin: 1rem 1rem;
     padding: 0 0 1.5rem 0;
     display: flex;
     justify-content: space-between;
